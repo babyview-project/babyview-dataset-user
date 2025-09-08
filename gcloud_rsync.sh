@@ -2,6 +2,7 @@
 cd /data/datasets/babyview/2025.2/gcloud/
 
 # 2. Use gcloud storage rsync to sync files
+# Need to separately run one command for each bucket (babyview_main_storage and babyview_bing_storage)
 # gcloud storage command below is the same as the gsutil above
 # gcloud additionally allows a --skip-if-dest-has-newer-mtime flag
 
