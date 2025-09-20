@@ -12,8 +12,10 @@ import glob
 from tqdm import tqdm
 import ray
 
-overall_video_dir = '/data/datasets/babyview/2025.2/gcloud/'
+# overall_video_dir = '/data/datasets/babyview/2025.2/gcloud/'
+overall_video_dir = '/ccn2a/dataset/babyview/2025.2/split_10s_clips_256p/'
 video_files = glob.glob(os.path.join(overall_video_dir, f'**/*.mp4'), recursive=True)
+print('Total number of video files found:', len(video_files))
 
 @ray.remote
 def get_video_duration(video_file):
